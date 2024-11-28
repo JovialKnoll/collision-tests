@@ -4,7 +4,7 @@ import os
 import jovialengine
 import pygame
 
-TITLE = "Template Project"
+TITLE = "collision tests"
 SCREEN_SIZE = (640, 360)
 COLORKEY = (255, 0, 255)
 FONT_SIZE = 8

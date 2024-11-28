@@ -6,20 +6,20 @@ src/venv/Scripts/activate.ps1
 # get pyinstaller
 pip install pyinstaller
 # create spec file
-pyinstaller --clean -ywF -i src/icon.ico -n REPLACE src/main.py
+pyinstaller --clean -ywF -i src/icon.ico -n collisions src/main.py
 # build exe
-pyinstaller -y REPLACE.spec
+pyinstaller -y collisions.spec
 # windows setup
-mkdir dist/REPLACE
-mv dist/REPLACE.exe dist/REPLACE/REPLACE.exe
+mkdir dist/collisions
+mv dist/collisions.exe dist/collisions/collisions.exe
 # copy in assets
-cp -r src/assets dist/REPLACE/assets
+cp -r src/assets dist/collisions/assets
 # copy in license
-cp LICENSE.txt dist/REPLACE/
+cp LICENSE.txt dist/collisions/
 # copy in readme
-cp README.txt dist/REPLACE/
+cp README.txt dist/collisions/
 # cleanup
 deactivate
 rm -r build
-rm REPLACE.spec
+rm collisions.spec
 cd scripts

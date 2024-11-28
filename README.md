@@ -1,2 +1,1 @@
-# JovialTemplate
-A template for starting projects based on JovialEngine.
+just some JovialEngine collision tests
