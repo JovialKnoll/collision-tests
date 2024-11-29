@@ -1,7 +1,7 @@
-REPLACE
+collisions
 
 Files and Folders:
-  REPLACE.exe
+  collisions.exe
     - game executable - run this!
   config.ini
     - will be created automatically
