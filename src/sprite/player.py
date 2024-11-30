@@ -4,9 +4,9 @@ import constants
 
 
 class Player(jovialengine.GameSprite):
-    _IMAGE_LOCATION = ''
+    _IMAGE_LOCATION = constants.SPRITE_PLAYER
     _ALPHA_OR_COLORKEY = constants.COLORKEY
-    _COLLISION_MASK_LOCATION = ''
+    _COLLISION_MASK_LOCATION = constants.SPRITE_PLAYER
     _COLLISION_MASK_ALPHA_OR_COLORKEY = constants.COLORKEY
     _GETS_INPUT = True
 
