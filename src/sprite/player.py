@@ -21,5 +21,4 @@ class Player(jovialengine.GameSprite):
             dy -= 8 * 32 * 0.001 * dt
         if self._input_frame.get_input_state(0, constants.EVENT_DOWN) == 1:
             dy += 8 * 32 * 0.001 * dt
-        self.pos_x += dx
-        self.pos_y += dy
+        self.pos += (dx, dy)
