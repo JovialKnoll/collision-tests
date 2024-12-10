@@ -10,7 +10,7 @@ class Player(jovialengine.GameSprite):
     _COLLISION_MASK_ALPHA_OR_COLORKEY = constants.COLORKEY
     _GETS_INPUT = True
 
-    def update(self, dt: int):
+    def update(self, dt, camera):
         dx = 0
         dy = 0
         if self._input_frame.get_input_state(0, constants.EVENT_LEFT) == 1:
