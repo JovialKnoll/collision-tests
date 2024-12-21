@@ -16,9 +16,10 @@ class Player(jovialengine.GameSprite):
         if self._input_frame.get_input_state(0, constants.EVENT_LEFT) == 1:
             dx -= 8 * 32 * 0.001 * dt
         if self._input_frame.get_input_state(0, constants.EVENT_RIGHT) == 1:
+            print(self.rect)
             dx += 8 * 32 * 0.001 * dt
         if self._input_frame.get_input_state(0, constants.EVENT_UP) == 1:
             dy -= 8 * 32 * 0.001 * dt
         if self._input_frame.get_input_state(0, constants.EVENT_DOWN) == 1:
             dy += 8 * 32 * 0.001 * dt
-        self.pos += (dx, dy)
+        self.rect.move_ip(dx, dy)
