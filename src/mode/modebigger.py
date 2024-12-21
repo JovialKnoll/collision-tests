@@ -12,10 +12,10 @@ class ModeBigger(jovialengine.ModeBase):
             match event.key:
                 # number keys switch the camera to different quadrants of the space for testing purposes
                 case pygame.K_1:
-                    self.camera_pos = (constants.SCREEN_SIZE[0] // 2, constants.SCREEN_SIZE[1] // 2)
+                    self._camera.topleft = (0, 0)
                 case pygame.K_2:
-                    self.camera_pos = (constants.SCREEN_SIZE[0] * 3 // 2, constants.SCREEN_SIZE[1] // 2)
+                    self._camera.topleft = (constants.SCREEN_SIZE[0], 0)
                 case pygame.K_3:
-                    self.camera_pos = (constants.SCREEN_SIZE[0] // 2, constants.SCREEN_SIZE[1] * 3 // 2)
+                    self._camera.topleft = (0, constants.SCREEN_SIZE[1])
                 case pygame.K_4:
-                    self.camera_pos = (constants.SCREEN_SIZE[0] * 3 // 2, constants.SCREEN_SIZE[1] * 3 // 2)
+                    self._camera.topleft = (constants.SCREEN_SIZE[0], constants.SCREEN_SIZE[1])
