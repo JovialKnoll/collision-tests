@@ -5,10 +5,6 @@ import constants
 
 
 class CircleOdd(jovialengine.GameSprite):
-    _IMAGE_LOCATION = constants.SPRITE_PLAYER
-    _ALPHA_OR_COLORKEY = constants.COLORKEY
-    _COLLISION_MASK_LOCATION = constants.SPRITE_PLAYER
-    _COLLISION_MASK_ALPHA_OR_COLORKEY = constants.COLORKEY
     _GETS_INPUT = True
 
     def _take_state_change(self, state_change: StateChange):
