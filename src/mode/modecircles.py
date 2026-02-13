@@ -9,7 +9,7 @@ class ModeCircles(jovialengine.ModeBase):
     def __init__(self):
         super().__init__()
         self._background.fill(constants.WHITE)
-        circle_even = CircleEven(center=(480, 270))
+        circle_even = CircleEven(topleft=(352, 212))
         circle_even.start(self)
 
     def _take_event(self, event):
