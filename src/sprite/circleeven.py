@@ -11,8 +11,8 @@ class CircleEven(jovialengine.GameSprite):
     _COLLISION_RADIUS = 16
     _GETS_INPUT = True
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
         self.image = self.mask.to_surface(setcolor=(255, 0, 0), unsetcolor=constants.COLORKEY)
         self.image.set_colorkey(constants.COLORKEY)
 
