@@ -13,7 +13,10 @@ class CircleEven(jovialengine.GameSprite):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.image = self.mask.to_surface(setcolor=(255, 0, 0), unsetcolor=constants.COLORKEY)
+        self._set_image((255, 0, 0))
+
+    def _set_image(self, color: tuple[int, int, int]):
+        self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
         self.image.set_colorkey(constants.COLORKEY)
 
     def _take_state_change(self, state_change: StateChange):
