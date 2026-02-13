@@ -1,3 +1,3 @@
-from .circleodd import CircleOdd
+from .circleeven import CircleEven
 from .player import Player
 from .star import Star

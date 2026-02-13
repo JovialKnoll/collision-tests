@@ -4,8 +4,17 @@ from jovialengine.inputframe import StateChange
 import constants
 
 
-class CircleOdd(jovialengine.GameSprite):
+class CircleEven(jovialengine.GameSprite):
+    # just using constants.SPRITE_PLAYER to start this as a 32x32 sprite
+    _IMAGE_LOCATION = constants.SPRITE_PLAYER
+    _ALPHA_OR_COLORKEY = False
+    _COLLISION_RADIUS = 16
     _GETS_INPUT = True
+
+    def __init__(self):
+        super().__init__()
+        self.image = self.mask.to_surface(setcolor=(255, 0, 0), unsetcolor=constants.COLORKEY)
+        self.image.set_colorkey(constants.COLORKEY)
 
     def _take_state_change(self, state_change: StateChange):
         # pixel-precise movement
