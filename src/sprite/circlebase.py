@@ -22,3 +22,15 @@ class CircleBase(jovialengine.GameSprite):
         self.image.set_at((16, 15), (0, 0, 0))
         self.image.set_at((16, 16), (0, 0, 0))
         self.image.set_colorkey(constants.COLORKEY)
+
+
+class CircleMove(CircleBase):
+    _GETS_INPUT = True
+    _COLOR = (255, 0, 0)
+    _COLOR_COLLIDE = (0, 255, 0)
+
+    def collide_CircleCollide(self, other):
+        self._set_image(self._COLOR_COLLIDE)
+
+    def update(self, dt, camera):
+        self._set_image(self._COLOR)

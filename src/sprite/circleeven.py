@@ -1,13 +1,8 @@
 import constants
-from .circlebase import CircleBase
+from .circlebase import CircleMove
 
 
-class CircleEven32(CircleBase):
-    _COLLISION_RADIUS = 16
-    _GETS_INPUT = True
-
-    _COLOR = (255, 0, 0)
-
+class CircleEven32(CircleMove):
     def _take_state_change(self, state_change):
         # pixel-precise movement
         if state_change.new_value == 1:
@@ -22,9 +17,3 @@ class CircleEven32(CircleBase):
             elif state_change.event_type == constants.EVENT_DOWN:
                 dy += 1
             self.rect.move_ip(dx, dy)
-
-    def collide_CircleCollide(self, other):
-        self._set_image((0, 255, 0))
-
-    def update(self, dt, camera):
-        self._set_image((255, 0, 0))
