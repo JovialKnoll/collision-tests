@@ -1,3 +1,4 @@
+import pygame
 import jovialengine
 
 import constants
@@ -17,11 +18,14 @@ class CircleBase(jovialengine.GameSprite):
 
     def _set_image(self, color: tuple[int, int, int]):
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
-        self.image.set_at((15, 15), (0, 0, 0))
-        self.image.set_at((15, 16), (0, 0, 0))
-        self.image.set_at((16, 15), (0, 0, 0))
-        self.image.set_at((16, 16), (0, 0, 0))
         self.image.set_colorkey(constants.COLORKEY)
+
+    def draw_dynamic(self, screen, offset):
+        first_center_point = round(pygame.Vector2(self.rect.topleft)) + (15, 15) + offset
+        screen.set_at(first_center_point, (0, 0, 0))
+        screen.set_at(first_center_point + (0, 1), (0, 0, 0))
+        screen.set_at(first_center_point + (1, 0), (0, 0, 0))
+        screen.set_at(first_center_point + (1, 1), (0, 0, 0))
 
 
 class CircleMove(CircleBase):
