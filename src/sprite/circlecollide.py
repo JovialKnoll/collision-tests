@@ -11,8 +11,12 @@ class CircleCollide(jovialengine.GameSprite):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self._set_image((0, 0, 0))
+        self._set_image((48, 48, 48))
 
     def _set_image(self, color: tuple[int, int, int]):
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
+        self.image.set_at((15, 15), (0, 0, 0))
+        self.image.set_at((15, 16), (0, 0, 0))
+        self.image.set_at((16, 15), (0, 0, 0))
+        self.image.set_at((16, 16), (0, 0, 0))
         self.image.set_colorkey(constants.COLORKEY)
