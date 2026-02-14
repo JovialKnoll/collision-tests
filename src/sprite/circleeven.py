@@ -1,26 +1,12 @@
-import jovialengine
-
 import constants
+from .circlebase import CircleBase
 
 
-class CircleEven32(jovialengine.GameSprite):
-    # just using constants.SPRITE_PLAYER to start this as a 32x32 sprite
-    _IMAGE_LOCATION = constants.SPRITE_PLAYER
-    _ALPHA_OR_COLORKEY = False
+class CircleEven32(CircleBase):
     _COLLISION_RADIUS = 16
     _GETS_INPUT = True
 
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
-        self._set_image((255, 0, 0))
-
-    def _set_image(self, color: tuple[int, int, int]):
-        self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
-        self.image.set_at((15, 15), (0, 0, 0))
-        self.image.set_at((15, 16), (0, 0, 0))
-        self.image.set_at((16, 15), (0, 0, 0))
-        self.image.set_at((16, 16), (0, 0, 0))
-        self.image.set_colorkey(constants.COLORKEY)
+    _COLOR = (255, 0, 0)
 
     def _take_state_change(self, state_change):
         # pixel-precise movement
