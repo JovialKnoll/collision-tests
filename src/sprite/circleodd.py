@@ -8,12 +8,12 @@ class CircleOdd32(jovialengine.GameSprite):
     # just using constants.SPRITE_PLAYER to start this as a 32x32 sprite
     _IMAGE_LOCATION = constants.SPRITE_PLAYER
     _ALPHA_OR_COLORKEY = False
-    _COLLISION_RADIUS = 15
+    _COLLISION_RADIUS = 15.5
     _GETS_INPUT = True
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self._set_image((255, 0, 0))
+        self._set_image((155, 0, 0))
 
     def _set_image(self, color: tuple[int, int, int]):
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
