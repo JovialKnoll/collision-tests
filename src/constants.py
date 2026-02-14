@@ -18,8 +18,10 @@ EVENT_NAMES = (
     "Down",
     "A",
     "B",
-    "X",
-    "Y",
+    "Left 2",
+    "Right 2",
+    "Up 2",
+    "Down 2",
 )
 EVENT_LEFT = jovialengine.EVENT_TYPE_START_POS
 EVENT_RIGHT = jovialengine.EVENT_TYPE_START_POS + 1
@@ -27,8 +29,10 @@ EVENT_UP = jovialengine.EVENT_TYPE_START_POS + 2
 EVENT_DOWN = jovialengine.EVENT_TYPE_START_POS + 3
 EVENT_A = jovialengine.EVENT_TYPE_START_POS + 4
 EVENT_B = jovialengine.EVENT_TYPE_START_POS + 5
-EVENT_X = jovialengine.EVENT_TYPE_START_POS + 6
-EVENT_Y = jovialengine.EVENT_TYPE_START_POS + 7
+EVENT_LEFT_2 = jovialengine.EVENT_TYPE_START_POS + 6
+EVENT_RIGHT_2 = jovialengine.EVENT_TYPE_START_POS + 7
+EVENT_UP_2 = jovialengine.EVENT_TYPE_START_POS + 8
+EVENT_DOWN_2 = jovialengine.EVENT_TYPE_START_POS + 9
 ALL_EVENTS = {
     EVENT_LEFT,
     EVENT_RIGHT,
@@ -36,8 +40,10 @@ ALL_EVENTS = {
     EVENT_DOWN,
     EVENT_A,
     EVENT_B,
-    EVENT_X,
-    EVENT_Y,
+    EVENT_LEFT_2,
+    EVENT_RIGHT_2,
+    EVENT_UP_2,
+    EVENT_DOWN_2,
 }
 INPUT_DEFAULTS = (
     jovialengine.InputDefault(0, EVENT_LEFT, jovialengine.InputType.KEYBOARD, pygame.K_LEFT),
@@ -46,16 +52,16 @@ INPUT_DEFAULTS = (
     jovialengine.InputDefault(0, EVENT_DOWN, jovialengine.InputType.KEYBOARD, pygame.K_DOWN),
     jovialengine.InputDefault(0, EVENT_A, jovialengine.InputType.KEYBOARD, pygame.K_z),
     jovialengine.InputDefault(0, EVENT_B, jovialengine.InputType.KEYBOARD, pygame.K_x),
-    jovialengine.InputDefault(0, EVENT_X, jovialengine.InputType.KEYBOARD, pygame.K_a),
-    jovialengine.InputDefault(0, EVENT_Y, jovialengine.InputType.KEYBOARD, pygame.K_s),
     jovialengine.InputDefault(0, EVENT_LEFT, jovialengine.InputType.CON_HAT, 0),
     jovialengine.InputDefault(0, EVENT_RIGHT, jovialengine.InputType.CON_HAT, 1),
     jovialengine.InputDefault(0, EVENT_UP, jovialengine.InputType.CON_HAT, 2),
     jovialengine.InputDefault(0, EVENT_DOWN, jovialengine.InputType.CON_HAT, 3),
     jovialengine.InputDefault(0, EVENT_A, jovialengine.InputType.CON_BUTTON, 0),
     jovialengine.InputDefault(0, EVENT_B, jovialengine.InputType.CON_BUTTON, 1),
-    jovialengine.InputDefault(0, EVENT_X, jovialengine.InputType.CON_BUTTON, 2),
-    jovialengine.InputDefault(0, EVENT_Y, jovialengine.InputType.CON_BUTTON, 3),
+    jovialengine.InputDefault(0, EVENT_LEFT_2, jovialengine.InputType.KEYBOARD, pygame.K_a),
+    jovialengine.InputDefault(0, EVENT_RIGHT_2, jovialengine.InputType.KEYBOARD, pygame.K_d),
+    jovialengine.InputDefault(0, EVENT_UP_2, jovialengine.InputType.KEYBOARD, pygame.K_w),
+    jovialengine.InputDefault(0, EVENT_DOWN_2, jovialengine.InputType.KEYBOARD, pygame.K_s),
 )
 
 TEXT_COLOR = (164, 162, 165)
