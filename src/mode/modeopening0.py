@@ -2,7 +2,7 @@ import jovialengine
 
 import constants
 from .modeopening import ModeOpening
-from .modecollisions import ModeCollisions
+from .modecircles import ModeCircles
 from sprite import Star
 
 
@@ -46,7 +46,7 @@ class ModeOpening0(ModeOpening):
         self.sprites_all.add(star_sprite)
 
     def _switch_mode(self):
-        self.next_mode = ModeCollisions()
+        self.next_mode = ModeCircles()
 
     def _update_pre_sprites(self, dt):
         self._time += dt
