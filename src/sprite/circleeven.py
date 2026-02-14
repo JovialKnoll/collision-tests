@@ -1,5 +1,4 @@
 import jovialengine
-from jovialengine.inputframe import StateChange
 
 import constants
 
@@ -19,7 +18,7 @@ class CircleEven32(jovialengine.GameSprite):
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
         self.image.set_colorkey(constants.COLORKEY)
 
-    def _take_state_change(self, state_change: StateChange):
+    def _take_state_change(self, state_change):
         # pixel-precise movement
         if state_change.new_value == 1:
             dx = 0
