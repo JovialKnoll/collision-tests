@@ -15,7 +15,6 @@ class CircleEven32(jovialengine.GameSprite):
         self._set_image((255, 0, 0))
 
     def _set_image(self, color: tuple[int, int, int]):
-        print(color)
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
         self.image.set_colorkey(constants.COLORKEY)
 
