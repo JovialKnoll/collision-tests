@@ -12,9 +12,9 @@ class CircleOdd32(jovialengine.GameSprite):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.set_image((155, 0, 0))
+        self._set_image((155, 0, 0))
 
-    def set_image(self, color: tuple[int, int, int]):
+    def _set_image(self, color: tuple[int, int, int]):
         self.image = self.mask.to_surface(setcolor=color, unsetcolor=constants.COLORKEY)
         self.image.set_colorkey(constants.COLORKEY)
 
@@ -34,4 +34,7 @@ class CircleOdd32(jovialengine.GameSprite):
             self.rect.move_ip(dx, dy)
 
     def collide_CircleCollide(self, other):
-        self.set_image((0, 155, 0))
+        self._set_image((0, 155, 0))
+
+    def update(self, dt, camera):
+        self._set_image((155, 0, 0))
