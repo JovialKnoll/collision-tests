@@ -28,6 +28,10 @@ class CircleBase(jovialengine.GameSprite):
         screen.set_at(first_center_point + (1, 1), (0, 0, 0))
 
 
+class CircleCollide(CircleBase):
+    pass
+
+
 class CircleMove(CircleBase):
     _GETS_INPUT = True
     _COLOR = (255, 0, 0)

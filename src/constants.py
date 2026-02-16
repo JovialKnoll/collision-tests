@@ -94,6 +94,7 @@ STAR = os.path.join(LOGOS_DIRECTORY, 'star.png')
 
 SPRITES_DIRECTORY = os.path.join(GRAPHICS_DIRECTORY, 'sprites')
 SPRITE_PLAYER = os.path.join(SPRITES_DIRECTORY, 'player.png')
+SPRITE_31 = os.path.join(SPRITES_DIRECTORY, '31x31.png')
 
 BACKGROUNDS_DIRECTORY = os.path.join(GRAPHICS_DIRECTORY, 'backgrounds')
 
