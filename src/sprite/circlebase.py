@@ -21,11 +21,11 @@ class CircleBase(jovialengine.GameSprite):
         self.image.set_colorkey(constants.COLORKEY)
 
     def draw_dynamic(self, screen, offset):
+        basis = round(pygame.Vector2(self.rect.topleft)) + offset
         first_center_point = round(pygame.Vector2(self.rect.topleft)) + (15, 15) + offset
-        screen.set_at(first_center_point, (0, 0, 0))
-        screen.set_at(first_center_point + (0, 1), (0, 0, 0))
-        screen.set_at(first_center_point + (1, 0), (0, 0, 0))
-        screen.set_at(first_center_point + (1, 1), (0, 0, 0))
+        for x in (0, 15, 16, 31):
+            for y in (0, 15, 16, 31):
+                screen.set_at(basis + (x, y), constants.BLACK)
 
 
 class CircleCollide(CircleBase):
