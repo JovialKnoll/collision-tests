@@ -4,6 +4,8 @@ from .circlebase import CircleMove
 
 class Circle32Even(CircleMove):
     _COLLISION_RADIUS = 16
+    _COLOR = (255, 0, 0)
+    _COLOR_COLLIDE = (0, 255, 0)
 
     def _take_state_change(self, state_change):
         # pixel-precise movement
