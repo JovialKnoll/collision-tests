@@ -97,6 +97,7 @@ SPRITE_PLAYER = os.path.join(SPRITES_DIRECTORY, 'player.png')
 SPRITE_31 = os.path.join(SPRITES_DIRECTORY, '31x31.png')
 
 BACKGROUNDS_DIRECTORY = os.path.join(GRAPHICS_DIRECTORY, 'backgrounds')
+BACKGROUND_COLLISIONS = os.path.join(BACKGROUNDS_DIRECTORY, 'collisions.png')
 
 LONGSLIDE = os.path.join(SOUND_DIRECTORY, 'longslide.ogg')
 
