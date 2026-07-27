@@ -22,3 +22,6 @@ class Player(jovialengine.GameSprite):
         if self._input_frame.get_input_state(0, constants.EVENT_DOWN) == 1:
             dy += 8 * 32 * 0.001 * dt
         self.rect.move_ip(dx, dy)
+
+    def static_collide_test(self):
+        print("collided with static background element 'test'")
